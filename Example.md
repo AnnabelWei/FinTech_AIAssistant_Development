@@ -26,6 +26,9 @@ In this development plan, I will outline the steps to create and deploy an AI as
 - **BERT (Bidirectional Encoder Representations from Transformers)**: Utilise BERT for building a knowledge-based QA system to provide real-time answers to customer queries.
 - **Hugging Face Transformers Library**: Use Hugging Face's Transformers library for fine-tuning BERT on internal documents.
 
+### Rule-Based System
+- **Custom Rules Engine**: Implement a rule-based system to handle specific scenarios and questions that can be addressed with predefined rules.
+
 ### Cloud Platform
 - **Amazon Web Services (AWS)**: Utilise AWS for scalable and reliable deployment of the AI assistant.
 
@@ -48,13 +51,18 @@ In this development plan, I will outline the steps to create and deploy an AI as
 - Fine-tune BERT on internal documents using the Hugging Face Transformers library.
 - Implement a question-answering API to provide real-time answers to customer queries.
 
-### Step 4: AI Assistant Development
+### Step 4: Rule-Based System Development
+
+- Define and implement rules to handle specific scenarios and questions.
+- Integrate the rule-based system with the AI assistant to complement the knowledge-based QA system.
+
+### Step 5: AI Assistant Development
 
 - Develop conversational AI capabilities to understand user queries and provide relevant responses.
-- Integrate the knowledge base QA system API to provide real-time answers based on internal documents.
+- Incorporate the knowledge base QA system and the rule-based system into the AI assistant.
 - Ensure data privacy by applying encryption, access control, tokenisation, and secure communication protocols when communicating with external APIs.
 
-### Step 5: Deployment and Testing
+### Step 6: Deployment and Testing
 
 - Containerise the AI assistant application using Docker.
 - Deploy Docker containers to Amazon Elastic Kubernetes Service (EKS) for scalable and reliable deployment.
@@ -63,7 +71,7 @@ In this development plan, I will outline the steps to create and deploy an AI as
 
 ## Conclusion
 
-By following this development plan and utilising the specified technologies and tools, can create a secure and efficient AI assistant to support customer service representatives in a fintech startup. This AI assistant will have knowledge of various internal documents and utilise a knowledge-based question-answering system to provide real-time answers to customer queries, while addressing data privacy concerns through encryption, access control, tokenisation, and secure communication protocols when interacting with external APIs on the Amazon Web Services (AWS) cloud platform. Continuous monitoring and updates will ensure the reliability and effectiveness of the AI assistant over time.
+By following this development plan and utilising the specified technologies and tools, can create a secure and efficient AI assistant to support customer service representatives in a fintech startup. This AI assistant will have knowledge of various internal documents and utilise a combination of a knowledge-based question-answering system, a rule-based system, and data privacy measures to provide accurate and reliable assistance to customers while ensuring data privacy and security.
 
 ## Code Snippets
 
@@ -95,7 +103,6 @@ answer = tokenizer.convert_tokens_to_string(answer_tokens)
 
 print("Answer:", answer)
 
-### Sample Dockerfile for containerising the application:
 # Use official Python image as the base image
 FROM python:3.9-slim
 
